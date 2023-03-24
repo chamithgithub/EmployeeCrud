@@ -1,17 +1,17 @@
-package lk.code.employeems.util;
+package lk.code.employeems.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
+import org.springframework.stereotype.Component;
 
+@Component
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 @Data
-public class ResponseUtil {
+public class ResponseDTO {
     private String code;
     private String message;
-    private Object data;
+    private Object content;
 
 }
