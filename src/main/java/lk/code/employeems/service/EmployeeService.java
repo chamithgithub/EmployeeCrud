@@ -1,10 +1,8 @@
 package lk.code.employeems.service;
 
-import javafx.scene.control.Alert;
 import lk.code.employeems.dto.EmployeeDTO;
 import lk.code.employeems.entity.Employee;
 import lk.code.employeems.repo.EmployeeRepo;
-import lk.code.employeems.util.ResponseUtil;
 import lk.code.employeems.util.VarList;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
