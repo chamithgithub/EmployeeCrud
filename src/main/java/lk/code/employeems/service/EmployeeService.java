@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -45,6 +46,16 @@ public class EmployeeService {
         List<Employee> employeeList = employeeRepo.findAll();
         return modelMapper.map(employeeList, new TypeToken<ArrayList<EmployeeDTO>>() {
         }.getType());
+    }
+
+    public EmployeeDTO searchEmployee(int empId){
+        if (employeeRepo.existsById(empId)){
+           Employee employee = employeeRepo.findById(empId).orElse(null);
+           return modelMapper.map(employee,EmployeeDTO.class);
+        }else {
+            return null;
+        }
+
     }
 
 }
