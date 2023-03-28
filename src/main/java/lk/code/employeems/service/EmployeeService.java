@@ -41,7 +41,7 @@ public class EmployeeService {
             return VarList.RSP_NO_DATA_FOUND;
         }
     }
-    public List<EmployeeDTO>getAllEmplokyee() {
+    public List<EmployeeDTO>getAllEmployee() {
         List<Employee> employeeList = employeeRepo.findAll();
         return modelMapper.map(employeeList, new TypeToken<ArrayList<EmployeeDTO>>() {
         }.getType());
